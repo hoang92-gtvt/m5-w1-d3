@@ -6,17 +6,20 @@ import { AppComponent } from './app.component';
 import { MyformComponent } from './myform/myform.component';
 import { RoutingComponent } from './routing/routing.component';
 import { HomeComponent } from './home/home.component';
+import {OverviewComponent} from "./overview/overview.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     MyformComponent,
     RoutingComponent,
-    HomeComponent
+    HomeComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
