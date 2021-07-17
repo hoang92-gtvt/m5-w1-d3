@@ -7,6 +7,7 @@ import { MyformComponent } from './myform/myform.component';
 import { RoutingComponent } from './routing/routing.component';
 import { HomeComponent } from './home/home.component';
 import {OverviewComponent} from "./overview/overview.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {OverviewComponent} from "./overview/overview.component";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
 
   ],
   providers: [],

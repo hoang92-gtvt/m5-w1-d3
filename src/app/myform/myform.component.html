@@ -1,1 +1,37 @@
 <p>myform works!</p>
+
+<div class="container">
+<form  (ngSubmit)="onSubmit()" #heroForm="ngForm" >
+<div formGroupName="address">
+  <h2>Form Login</h2>
+</div>
+<div>
+  <label for="name">Name </label>
+  <input
+    id="name"
+    type="text"
+    class="form-control"
+    name="name"
+    [(ngModel)]="name"
+    required
+  >
+
+</div>
+<div>
+  <label for="pass">PassWord </label>
+  <input
+    id="pass"
+    type="text"
+    class="form-control"
+    name="password"
+    [(ngModel)]="pass"
+  >
+
+</div>
+
+<br>
+  <p>Complete the form to enable button.</p>
+  <button type="submit" [disabled]="!heroForm.form.valid">Submit</button>
+
+</form>
+</div>
