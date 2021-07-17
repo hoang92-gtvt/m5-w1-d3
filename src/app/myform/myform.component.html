@@ -15,7 +15,7 @@
     [(ngModel)]="name"
     required
   >
-
+  <span *ngIf="name===''" class ="errorMessage"> Can phai nhap ten</span>
 </div>
 <div>
   <label for="pass">PassWord </label>
@@ -26,9 +26,21 @@
     name="password"
     [(ngModel)]="pass"
   >
-
+  <span *ngIf="pass===''" class ="errorMessage">Can nhap password</span>
 </div>
-
+<div>
+  <label>Danh sach role</label>
+  <select (change)="selectRole(roleTag.value)" #roleTag>
+    <option *ngFor="let role of roles" [value]="role">{{role}}</option>
+  </select>
+</div>
+  <br>
+  <div>
+    <label>Danh sach role2</label>
+    <select (change)="selectRole2($event)" >
+      <option *ngFor="let role of roles" [value]="role">{{role}}</option>
+    </select>
+  </div>
 <br>
   <p>Complete the form to enable button.</p>
   <button type="submit" [disabled]="!heroForm.form.valid">Submit</button>

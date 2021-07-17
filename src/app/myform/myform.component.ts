@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class MyformComponent implements OnInit {
   public name: String ='';
   public pass: String ='';
+  public roles:Array<String>=["Admin","User", "Customer"];
+  public role :String ='';
 
   constructor() { }
 
@@ -17,6 +19,16 @@ export class MyformComponent implements OnInit {
   onSubmit() {
     // TODO: Use EventEmitter with form value
     console.log(this.name);
+  }
+
+  public selectRole(event:any){
+    console.log(event);
+    this.role = event;
+
+  }
+  public selectRole2(event:Event){
+    console.log((event.target as HTMLInputElement).value);
+
   }
 
 }
