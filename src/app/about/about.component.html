@@ -3,3 +3,12 @@
 
 <h3>Chao ban {{name}}</h3>
 <h3>Ban has {{age}} tuoi</h3>
+
+
+<h3>Posts</h3>
+<div *ngFor='let post of posts'>
+<span>Du lieu post lay ra : {{post|json}} </span>
+</div>
+<br>
+
+<button (click)="addPost()">new post </button>

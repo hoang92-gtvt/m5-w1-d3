@@ -36,6 +36,21 @@ export class ServerHttpService {
  ;
 }
 
+public getPosts(){
+  const url= `${this.REST_API_SERVER}/posts`;
+  return this.httpClient
+  .get<any>(url, this.thhpOptions)
+ ;
+}
+
+public addPosts(data : any){
+
+  const url= `${this.REST_API_SERVER}/posts`;
+  return this.httpClient
+  .post<any>(url,data, this.thhpOptions)
+ ;
+}
+
 
 
 
