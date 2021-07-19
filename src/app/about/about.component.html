@@ -9,18 +9,19 @@
 <!-- <div *ngFor='let post of posts'>
 <span>Du lieu post lay ra : {{post|json}} </span>
 </div> -->
-
+<br>
+Số tin nhắn<span class="badge">{{posts?.length}}</span>
 
 <table id="customers">
     <tr>
-        <th>Company</th>
-        <th>Contact</th>
-        <th>Country</th>
+        <th>STT</th>
+        <th>Title</th>
+        <th>Author</th>
       </tr>
       <tr *ngFor='let post of posts, let ind=index'>
-        <td>{{ind}}</td>
-        <td>{{post.title}}</td>
-        <td>{{post.author}}</td>
+        <td>{{ind+1}}</td>
+        <td>{{post?.title}}</td>
+        <td>{{post?.author}}</td>
       </tr>
 
 </table>
